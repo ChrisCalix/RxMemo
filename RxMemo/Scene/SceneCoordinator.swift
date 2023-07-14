@@ -12,11 +12,11 @@ import RxCocoa
 class SceneCoordinator: SceneCoordinatorType {
     private let bag = DisposeBag()
     private var window: UIWindow
-    private var currentVC: UIViewController
+    private var currentVC: UIViewController?
     
     required init(window: UIWindow) {
         self.window = window
-        currentVC = window.rootViewController!
+        currentVC = window.rootViewController
     }
     
     @discardableResult
@@ -29,9 +29,10 @@ class SceneCoordinator: SceneCoordinatorType {
         case .root:
             currentVC = target
             window.rootViewController = target
+            window.makeKeyAndVisible()
             subject.onCompleted()
         case .push:
-            guard let nav = currentVC.navigationController else {
+            guard let nav = currentVC?.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
@@ -40,7 +41,7 @@ class SceneCoordinator: SceneCoordinatorType {
             currentVC = target
             subject.onCompleted()
         case .modal:
-            currentVC.present(target, animated: animated) {
+            currentVC?.present(target, animated: animated) {
                 subject.onCompleted()
             }
             currentVC = target
@@ -52,12 +53,12 @@ class SceneCoordinator: SceneCoordinatorType {
     @discardableResult
     func close(animated: Bool) -> RxSwift.Completable {
         return Completable.create { [weak self] completable in
-            if let presentingVC = self?.currentVC.presentingViewController {
-                self?.currentVC.dismiss(animated: animated) {
+            if let presentingVC = self?.currentVC?.presentingViewController {
+                self?.currentVC?.dismiss(animated: animated) {
                     self?.currentVC = presentingVC
                     completable(.completed)
                 }
-            } else if let nav = self?.currentVC.navigationController {
+            } else if let nav = self?.currentVC?.navigationController {
                 guard nav.popViewController(animated: animated) != nil else {
                     completable(.error(TransitionError.cannotPop))
                     return Disposables.create()
