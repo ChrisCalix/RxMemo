@@ -24,17 +24,17 @@
             </objects>
             <point key="canvasLocation" x="-190" y="1"/>
         </scene>
-        <!--Navigation-->
+        <!--Memo List-->
         <scene sceneID="tbW-Qr-BxC">
             <objects>
-                <viewController id="Tv5-8M-h7X" sceneMemberID="viewController">
+                <viewController id="Tv5-8M-h7X" customClass="MemoListViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fsh-56-WxF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="phf-qt-Pmg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Navigation" id="iIB-hV-cZU"/>
+                    <navigationItem key="navigationItem" title="Memo List" id="iIB-hV-cZU"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZO-xP-zNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -44,7 +44,7 @@
         <!--Composition-->
         <scene sceneID="sz5-Ov-Mix">
             <objects>
-                <viewController id="cPE-dy-3sh" sceneMemberID="viewController">
+                <viewController id="cPE-dy-3sh" customClass="MemoComposeViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6fJ-fR-f0x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="2388.5496183206105" y="14.788732394366198"/>
         </scene>
-        <!--View Controller-->
+        <!--Memo Detail View Controller-->
         <scene sceneID="rtn-Rf-Vnb">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" id="8yJ-0f-d3G" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="8yJ-0f-d3G" customClass="MemoDetailViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Erj-Yh-qYO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
