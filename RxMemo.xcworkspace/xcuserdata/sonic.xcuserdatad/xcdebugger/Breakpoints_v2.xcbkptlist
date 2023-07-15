@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9550EA08-91F4-477D-A299-F76FD0E35511"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08AF85E7-08B4-4254-B164-F8889C3E7686"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxMemo/ViewModel/MemoDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "performUpdate(memo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "08AF85E7-08B4-4254-B164-F8889C3E7686 - 7dd9a5aeaa00c697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxMemo.MemoDetailViewModel.performUpdate(memo: RxMemo.Memo) -&gt; Action.Action&lt;Swift.String, ()&gt;"
+                  moduleName = "RxMemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sonic/Documents/iOSDev/RxMemo/RxMemo/ViewModel/MemoDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "08AF85E7-08B4-4254-B164-F8889C3E7686 - e5daa4a52bcfe1c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; RxSwift.Observable&lt;()&gt; in RxMemo.MemoDetailViewModel.performUpdate(memo: RxMemo.Memo) -&gt; Action.Action&lt;Swift.String, ()&gt;"
+                  moduleName = "RxMemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sonic/Documents/iOSDev/RxMemo/RxMemo/ViewModel/MemoDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "678AEBA4-180A-4187-98B6-BBA9FBFAEA38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxMemo/ViewModel/MemoDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "performUpdate(memo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BACE1726-4A35-47E2-BBF1-8FBC761969E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxMemo/ViewModel/MemoDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "performUpdate(memo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

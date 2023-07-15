@@ -60,4 +60,10 @@ class MemoListViewModel: CommonViewModel {
                 .map { _ in }
         }
     }()
+    
+    lazy var deleteAction: Action<Memo, Swift.Never> = {
+        return Action { memo in
+            return self.storage.delete(using: memo).ignoreElements()
+        }
+    }()
 }
