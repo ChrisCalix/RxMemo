@@ -127,18 +127,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEC-MM-GJZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFM-yV-Z55">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
                                 <items>
-                                    <navigationItem title="Detail" id="xL7-05-znl"/>
+                                    <barButtonItem systemItem="trash" id="FFV-KU-8SH">
+                                        <color key="tintColor" red="0.92941176889999999" green="0.45098042490000001" blue="0.4352940917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="asv-hW-CiV"/>
+                                    <barButtonItem systemItem="compose" id="f1c-py-x1A"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tzr-Rh-pZf"/>
+                                    <barButtonItem systemItem="action" id="UM3-ra-eOE"/>
                                 </items>
-                            </navigationBar>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-aw-Pwv">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentCell" textLabel="u1Y-OF-7op" style="IBUITableViewCellStyleDefault" id="BFB-Ys-g52">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFB-Ys-g52" id="U0I-Wj-XBW">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u1Y-OF-7op">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" textLabel="saz-I8-Stj" style="IBUITableViewCellStyleDefault" id="Vgo-N1-N0D">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vgo-N1-N0D" id="eXo-WP-xnb">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="saz-I8-Stj">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pRh-Aq-3Vq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wtF-aw-Pwv" firstAttribute="top" secondItem="pRh-Aq-3Vq" secondAttribute="top" id="5bm-At-zCb"/>
+                            <constraint firstItem="KFM-yV-Z55" firstAttribute="trailing" secondItem="pRh-Aq-3Vq" secondAttribute="trailing" id="Ixj-9f-1Ie"/>
+                            <constraint firstItem="KFM-yV-Z55" firstAttribute="top" secondItem="wtF-aw-Pwv" secondAttribute="bottom" id="Uzn-Tg-t6H"/>
+                            <constraint firstItem="KFM-yV-Z55" firstAttribute="leading" secondItem="pRh-Aq-3Vq" secondAttribute="leading" id="ZTf-nW-YXb"/>
+                            <constraint firstItem="wtF-aw-Pwv" firstAttribute="leading" secondItem="pRh-Aq-3Vq" secondAttribute="leading" id="c2A-3l-q23"/>
+                            <constraint firstItem="pRh-Aq-3Vq" firstAttribute="bottom" secondItem="KFM-yV-Z55" secondAttribute="bottom" id="oDe-Th-7mY"/>
+                            <constraint firstItem="pRh-Aq-3Vq" firstAttribute="trailing" secondItem="wtF-aw-Pwv" secondAttribute="trailing" id="pqe-Sa-gPK"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="FFV-KU-8SH" id="cdy-gG-Vza"/>
+                        <outlet property="editButton" destination="f1c-py-x1A" id="ELd-rb-M5T"/>
+                        <outlet property="shareButton" destination="UM3-ra-eOE" id="KA4-zK-kyz"/>
+                        <outlet property="tableView" destination="wtF-aw-Pwv" id="xbg-tF-gXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LL5-v0-hQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +244,9 @@
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
