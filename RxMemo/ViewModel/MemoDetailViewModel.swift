@@ -40,4 +40,37 @@ class MemoDetailViewModel: CommonViewModel {
             .asObservable()
             .map { _ in }
     }
+    
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        return Action { input in
+            self.storage
+                .update(using: memo, content: input)
+                .subscribe(onNext: { updated in
+                    self.contents.onNext([
+                        updated.content,
+                        self.formatter.string(from: updated.insertDate)
+                    ])
+                })
+                .disposed(by: self.rx.disposeBag)
+            
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let composeViewModel = MemoComposeViewModel(
+                title: "Detail Memo",
+                sceneCoordinator: self.sceneCoordinator,
+                storage: self.storage,
+                saveAction: self.performUpdate(memo: self.memo))
+            
+            let composeScene = Scene.compose(composeViewModel)
+            
+            return self.sceneCoordinator
+                .transition(to: composeScene, using: .modal, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
 }

@@ -28,6 +28,7 @@ class MemoListViewModel: CommonViewModel {
             return self.storage.delete(using: memo).map { _ in }
         }
     }
+    
     func makeCreationAction() -> CocoaAction {
         return CocoaAction { _ in
             return self.storage.createMemo(using: "")

@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CommonViewModel {
+class CommonViewModel: NSObject {
     let title: Driver<String>
     let sceneCoordinator: SceneCoordinatorType
     let storage: MemoStorageType
