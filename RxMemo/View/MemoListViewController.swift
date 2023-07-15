@@ -38,5 +38,13 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         addBarButton
             .rx
             .action = viewModel.makeCreationAction()
+        
+        Observable.zip(tableView.rx.modelSelected(Memo.self), tableView.rx.itemSelected)
+            .do(onNext: { [weak self] _, indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: true)
+            })
+                .map { $0.0 }
+                .bind(to: viewModel.detailAction.inputs)
+                .disposed(by: rx.disposeBag)
     }
 }
