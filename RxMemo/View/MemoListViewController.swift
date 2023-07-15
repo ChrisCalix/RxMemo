@@ -30,9 +30,7 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .disposed(by: bag)
         
         viewModel.memoList
-            .bind(to: tableView.rx.items(cellIdentifier: "Cell")) {row, memo, cell in
-                cell.textLabel?.text = memo.content
-            }
+            .bind(to: tableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: bag)
         
         addBarButton

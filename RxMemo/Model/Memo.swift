@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RxDataSources
 
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType {
     var content: String
     let insertDate: Date
     let identity: String
